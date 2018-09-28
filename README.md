@@ -17,9 +17,7 @@ Predicted Deviation<br>
 <pre><code>
 
 	currency = pd.read_csv('currency.csv', index_col=['Time'], parse_dates=['Time'])
-
     data = currency.GEMS_GEMS_SPENT[:-50]
-
     slen = 30 
 	'''
 	slen季节性参数，currency数据(每天一个点)季节性是月，即30天
@@ -27,7 +25,6 @@ Predicted Deviation<br>
 	n_preds 为预测接下来多少数据，单位为采点间隔时间
 	比如一天采一次点，n_preds为N，那么就是预测接下来N天的数据
 	'''
-
     x = [0, 0, 0]
 	'''
     opt = minimize(time_series_cv_score, x0 = x,
@@ -43,9 +40,8 @@ Predicted Deviation<br>
 
     alpha_final, beta_final, gamma_final = model.get_best_parameters()
     print(alpha_final, beta_final, gamma_final)
-
 	'''
-    model.triple_exponential_smoothing()
+	model.triple_exponential_smoothing()
 	'''
     model.triple_exponential_smoothing(plot_results=True, plot_predicted_deviation=True,
                                        plot_intervals=True, plot_anomalies=True)
@@ -55,6 +51,7 @@ Predicted Deviation<br>
     print(model.upper_bond[340:])
     print(result[340:])
     print(model.lower_bond[340:]) 
+	
 	'''
 	告警时：
 	1. 模型训练
