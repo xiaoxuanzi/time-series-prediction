@@ -575,12 +575,12 @@ if __name__ == '__main__':
     alpha_final, beta_final, gamma_final = model.get_best_parameters()
     print(alpha_final, beta_final, gamma_final)
 
-    model.triple_exponential_smoothing()
+    # model.triple_exponential_smoothing()
 
-    # model.triple_exponential_smoothing(plot_results=True, plot_predicted_deviation=True,
-    #                                    plot_intervals=True, plot_anomalies=True)
+    model.triple_exponential_smoothing(plot_results=True, plot_predicted_deviation=True,
+                                       plot_intervals=True, plot_anomalies=True)
 
-    result =  model.result
+    # result =  model.result
     # print(len(result), len(data))
     # print(model.upper_bond[340:])
     # print(result[340:])
