@@ -580,9 +580,9 @@ if __name__ == '__main__':
     model.triple_exponential_smoothing(plot_results=True, plot_predicted_deviation=True,
                                        plot_intervals=True, plot_anomalies=True)
 
-    # result =  model.result
-    # print(len(result), len(data))
-    # print(model.upper_bond[340:])
-    # print(result[340:])
-    # print(model.lower_bond[340:])
-    #
+    result =  model.result
+    print(len(result), len(data))
+    print(model.upper_bond[340:])
+    print(result[340:])
+    print(model.lower_bond[340:])
+
