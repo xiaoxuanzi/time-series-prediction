@@ -1,5 +1,7 @@
 # time-series-prediction
 This project implements the Holt-Winters model(Triple exponential smoothing)
+二次指数平滑，保留平滑信息和趋势信息
+三次指数平滑法，添加第三个量描述季节性(累加式季节性或者累乘式季节性)
 #### Example
 <pre><code>
 python  time_series.py	
